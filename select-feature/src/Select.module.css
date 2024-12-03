@@ -1,0 +1,100 @@
+.container {
+	position: relative;
+	width: 20em;
+	min-height: 1.25em;
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+	padding: 0.5em;
+	border: 0.08em solid #777;
+	outline: none;
+	border-radius: 0.25em;
+	margin: 2em auto;
+}
+.value {
+	flex-grow: 1;
+	display: flex;
+	gap: 0.5em;
+	flex-wrap: wrap;
+}
+.container:focus {
+	border-color: hsl(200, 100%, 50%);
+}
+.clear-btn {
+	background-color: transparent;
+	color: #777;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	font-size: 1.25em;
+}
+.clear-btn:focus,
+.clear-btn:hover {
+	color: #333;
+}
+
+.divider {
+	background-color: #777;
+	/* using align self insted of height100% because min-height is provided for container */
+	align-self: stretch;
+	width: 0.05em;
+}
+.caret {
+	translate: 0 25%;
+	border: 0.25em solid transparent;
+	border-top-color: #777;
+}
+.options {
+	padding: 0.2em;
+	margin: 0;
+	list-style: none;
+	max-height: 10em;
+	/* adding scroll in options */
+	overflow-y: auto;
+	overflow-x: hidden;
+	border: 0.08em solid #777;
+	border-radius: 0.25em;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	/* space b/w options tab and caret */
+	top: calc(110%);
+	background-color: #fff;
+	z-index: 100;
+	display: none;
+}
+.show {
+	display: block;
+}
+
+.option {
+	padding: 0.25em 0.5em;
+	cursor: pointer;
+}
+.option.selected {
+	background-color: hsl(200, 100%, 50%);
+	color: #000;
+}
+.option.highlighted {
+	background-color: hsl(200, 100%, 70%);
+	color: #000;
+}
+
+.option-badge {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	cursor: pointer;
+	gap: 0.2em;
+	padding: 0.15em 0.4em;
+}
+.option-badge:hover,
+.option-badge:focus {
+	color: #252525;
+	background-color: hsla(0, 3%, 39%, 0.885);
+	border: hsla(0, 3%, 39%, 0.885);
+}
+.option-badge:hover > .remove-btn {
+	color: red;
+}

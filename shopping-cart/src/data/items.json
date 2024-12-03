@@ -1,0 +1,20 @@
+[{
+    "id": 1,
+    "name": "Book",
+    "price": 10.99,
+    "imgUrl":"https://source.unsplash.com/random/100×100?book"
+},
+
+    {
+    "id": 2,
+    "name": "Computer",
+    "price": 11.99,
+    "imgUrl":"https://source.unsplash.com/random/100×100?computer"
+},
+    {
+    "id": 3,
+    "name": "Banana",
+    "price": 1.99,
+    "imgUrl":"https://source.unsplash.com/random/100×100?banana"
+}
+]
